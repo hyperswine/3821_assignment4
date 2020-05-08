@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e}
+\DeclareUnicodeCharacter{2212}{-}
+
+\usepackage{wrapfig}
+
+\usepackage{mathtools}
+\usepackage{booktabs,multicol,multirow}
+\usepackage{wasysym}
+
+\newcommand{\newpar}{\vspace{.2in} \noindent}
+\usepackage[margin=1.2in]{geometry}
+
+\title{COMP3821 Homework 4}
+\author{Jason Qin, z5258237}
+\date{April 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 4.}
+\paragraph*{4.1} \textbf{Proof of TSP in NP.} \\
+
+\noindent
+For all true results of TSP, check whether $m[C_n, C_i] + \sum_{1<i<n} M[C_i, C_{i+1}] \leq k$.
+Also check whether $M[C_i, C_{i+1}] \in M$ such that all vertices have been visited once.
+These checks can be done in polynomial time (linear). Thus there exists a verification algorithm
+to verify the results of TSP in polynomial time.
+
+\paragraph*{4.2} \textbf{Construction of distances.} \\
+
+\noindent
+
+
+\end{document}
