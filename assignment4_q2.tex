@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e}
+\DeclareUnicodeCharacter{2212}{-}
+
+
+\newcommand{\newpar}{\vspace{.2in} \noindent}
+\usepackage[margin=1.2in]{geometry}
+
+\title{COMP3821 Homework 4}
+\author{Jason Qin, z5258237}
+\date{April 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 2.}
+\paragraph{2.1} \textbf{Variables.} \\
+
+\noindent
+$n$ is the number of distinct toys $t_i$ that can be produced. \\
+$m$ is the number of factories $f_j$ availiable for producing toys. \\
+$C_i$ is the setup cost for a new factory $i$. \\
+$P_i$ is the profit for selling each toy $i$. \\
+$H_j$ is the total production hours for factory $j$, $h_j$ is the hours used. \\
+$A_{ij}$ is the production rate (toys/hour) of toy $i$ at factory $j$. \\
+$S$ is the map of factories to tuples containing the number of toys e.g. (toy $1$: 4, toy $2$: 5).
+
+\paragraph*{2.2} \textbf{Constraints.} \\
+
+\noindent
+$(\sum_{i=1}^{n}P_i) - C_j > 0$ to make a net profit at factory $j$. \\
+$h_j \leq H_j$ for all $0 \leq j \leq m$.
+
+\paragraph*{2.3} \textbf{Objective.} \\
+
+\noindent
+Maximize the net profits per factory to get the maximum total profit from selling toys.
+Hence the goal is to maximize,
+
+$$\sum_{s_j \in S}^{m} profit(s_j)$$
+
+where profit($s$) sums up
+the total net profit of toys made at a factory.
+
+\paragraph*{2.4} \textbf{Polynomial-Time Solution.} \\
+
+\noindent
+Since this is an integer LP problem, it is fundamentally NP-hard. However, a polynomial solution may exist
+% Think about NP-hard and integer LP problems a bit more. Read more on them and watch some vids integer LP
+% and relationship to NP-Hard.
+
+\end{document}

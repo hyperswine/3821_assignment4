@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e}
+\DeclareUnicodeCharacter{2212}{-}
+
+
+\newcommand{\newpar}{\vspace{.2in} \noindent}
+\usepackage[margin=1.2in]{geometry}
+
+\title{COMP3821 Homework 4}
+\author{Jason Qin, z5258237}
+\date{April 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 1.}
+\paragraph{1.1} \textbf{Nature of LP.} \\
+
+\noindent
+Since each jewellery item is discrete, the burgular cannot e.g., take 'half' a necklace.
+Thus burgular must formulate an integer LP problem.
+
+\paragraph{1.2} \textbf{Variables.} \\
+
+\noindent
+$n$ items.\\
+$c_i$ is the value of the $i$th item, $1 \leq i \leq n$ \\
+$w_i$ is the weight of the $i$th item. \\
+$M$ is the weight capacity of the backpack.
+
+\paragraph{1.3} \textbf{Constraints.} \\
+
+\noindent
+$$\sum_{i=1}^{n} w_i \leq M$$
+
+\paragraph*{1.4} \textbf{Objective.} \\
+
+\noindent
+We want to get the most value out of the items looted such that
+$\sum_{i=1}^{n} c_i$ is maximized.
+
+\end{document}

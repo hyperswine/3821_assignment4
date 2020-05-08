@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e}
+\DeclareUnicodeCharacter{2212}{-}
+
+\usepackage{wrapfig}
+
+\usepackage{mathtools}
+\usepackage{booktabs,multicol,multirow}
+\usepackage{wasysym}
+
+\newcommand{\newpar}{\vspace{.2in} \noindent}
+\usepackage[margin=1.2in]{geometry}
+
+\title{COMP3821 Homework 4}
+\author{Jason Qin, z5258237}
+\date{April 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 3.}
+% research discrete and continous variables a bit more.
+\paragraph*{3.1} \textbf{Discrete Variables.} \\
+
+\noindent
+$j$, a discrete variable that takes a value from $1,2...10$, and $inv_j$ represents the $j$th investment. \\
+$I$, a set containing the opportunities that are undertaken. \\
+$x_j$, a value either of $0$ or $1$ denoting whether an investment is undertaken.
+
+\paragraph*{3.2} \textbf{Continuous Variables.} \\
+
+\noindent
+$P_j$ is the gross profit obtained after undertaking $inv_j$. \\
+$C_j$ is the initial cost required for $inv_j$. \\
+$Q$ is the total capital available for investment.
+
+\paragraph*{3.3} \textbf{Constraints.} \\
+
+\noindent
+$Q \geq 0$. If $Q = 0$, then the best investment is simply $I = \{\}$. \\
+Either $inv_3 \in I$ OR $inv_4 \in I$, but not both. \\
+Either $inv_5 \in I$ OR $inv_6 \in I$, but not both. \\
+Unless $inv_3 \in I$ OR $inv_4 \in I$, $inv_5 \notin I$ and $inv_6 \notin I$. \\
+$I$ must contain elements $inv_g \in V = \{1,2,7,8,9,10\}$ such that, $2 \leq \sum_{inv \in I} inv_g \leq 4$.
+
+\paragraph*{3.4} \textbf{Objective.} \\
+
+\noindent
+We want an $I$ such that net-profit(I) is maximized. The net profit for each investment is $N_j = P_j - C_j$, so the goal is to choose some
+$I$ containing the maximum $\sum_{N_j \in I} N_j$.
+i.e. the goal is to maximize,
+%% perhaps try to think holistically about the problem, what can you make it so you're incorporating everything.
+
+$$N_{max} = N_1x_1 + N_2x_2 + N_3x_3 + ... + N_{10}x_{10}$$
+
+for $0 \leq x_j \leq 1$
+
+\paragraph*{3.5} \textbf{Polynomial-Time solvability.} \\
+%think about what the problem really is. Is it an integer LP?
+%IF it is, then only polynomial time if P=NP.
+%ELSE if you think it is a non-integer LP, then it is Yes, regardless of P vs. NP.
+
+%NOTES: No, regardless of P vs. NP - is probably wrong
+%       Yes, if P =/= NP. No, otherwise - sounds very wrong.
+
+\noindent
+The following choices are selected,
+
+\begin{itemize}
+\item Yes, regardless of P vs. NP.
+\item Yes, if P $=$ NP. No otherwise.
+\end{itemize}
+
+\end{document}

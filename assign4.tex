@@ -1,0 +1,254 @@
+\documentclass{article}
+
+\usepackage[printqrbox=false,printhint=false,printanswer=true,printmarkingguide=true,printdraftpaper=false]{abdaexercises}
+%\usepackage[printmarkingguide=false]{abdaexercises}
+%\usepackage{abdaexercises}
+%\excludecomment{makespace}
+
+\usetikzlibrary{patterns}
+\usepackage{wrapfig}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{booktabs,multicol,multirow}
+\usepackage{wasysym}
+\usepackage{graphicx, caption, subcaption}
+
+\usepackage{xspace}
+\newcommand{\problemname}[1]{\textsc{#1}}
+\newcommand{\np}{\textsf{NP}\xspace}
+\newcommand{\npcomplete}{\textsf{NP-complete}\xspace}
+
+\newcommand{\decisionproblem}[3]{
+\smallbreak
+\noindent
+\begin{tabular}{p{\columnwidth}}
+\hline
+\underline{\textbf{#1}:} \\
+Instance: #2 \\
+Question: #3 \\
+\hline
+\end{tabular}
+\smallbreak}
+
+
+% personal stuff
+\newcommand{\sem}{20T1}
+\Institution{UNSW}
+\SubjectName{\begin{tabular}{l}Ext Algo \& Prog Techniques\\Ext Design\& Analysis of Algo\end{tabular}}
+\SubjectNo{COMP3821/9801}
+\ExamType{Assignment 4}
+
+\begin{document}
+\noindent Question 1, 2, and 3 are worth 20\% each, and Question 4 is worth 40\%.
+Due Monday, May 4, 6pm.
+
+\begin{Question}
+Suppose a burglar has broken into a jewellery store with $n$ items.
+Let $c_i$ and $w_i$ be each items value and weight respectively.
+The burglar needs to decide which items to take to maximize his profit. Let $M$ be the total weight capacity of his backpack.
+
+\begin{Subquestion}
+The burglar isn't sure whether to formulate this problem with Linear Programming or Integer Linear Programming. Decide which one to use and justify your choice.
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+List the variables.
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+List the constraints.
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+Provide the objective function.
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+\end{Question}
+
+\newpage
+\begin{Question}
+Suppose you are a company that is responsible for manufacturing many types of toys. You have $n$ new toys that you can decide to start manufacturing, each one having a setup cost $C_i$ for the new facility, and the predicted profit $P_i$ for each toy sold.
+
+You have $m$ factories at your disposal that can produce any toy, you want to decide which factories are to be responsible for which toys. Each factory produces each toy at different rates (i.e. factory 1 might produce toy 2 quicker than average, but produce toy 3 slower than average, etc). Furthermore, each factory only has a certain amount of hours available for production.
+
+Let $A_{ij}$ be the production rate of factory $j$ for toy $i$. Let $H_j$ be the production hours available for each factory.
+
+Your task is to decide \underline{which} toys to produce, \underline{where} and \underline{how many} to produce to maximize the total profit by solving a correspinding (Integer) Linear Programming problem.
+
+\begin{Subquestion}
+List the variables.
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+List the constraints.
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+Provide the objective function.
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+Can a solution be derived in polynomial time?
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+\end{Question}
+
+\newpage
+\begin{Question}
+A project manager in a company is considering a portfolio of 10 large project investments.
+These investments differ in the estimated long-run profit (net present value) they will generate as well as in the amount of capital required.
+
+Let $P_j$ and $C_j$ denote the estimated profit and capital required for investment opportunity $j$ where $1\leq j\leq 10$.
+The total amount of capital available for these investments is $Q$.
+
+\begin{itemize}
+    \item Investment opportunities 3 and 4 are mutually exclusive and so are 5 and 6.
+    \item Neither 5 nor 6 can be undertaken unless either 3 or 4 is undertaken.
+    \item At least two and at most four investment opportunities have to be undertaken from the set $\{1,2,7,8,9,10\}$.
+\end{itemize}
+
+The project manager wishes to select the combination of capital investments that will maximise the total estimated long-run profit subject to the restrictions described above.
+Formulate this problem using (Integer) Linear Programming, making sure to model all of the constraints.
+
+\begin{Subquestion}
+List the discrete variables. If you do not use any such variables, write ``None''.
+\begin{makespace}
+\vspace{10mm}
+\end{makespace}
+
+Discrete variables:
+\begin{makespace}
+\vspace{10mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+List the continuous variables. If you do not use any such variables, write ``None''.
+
+\begin{makespace}
+\vspace{10mm}
+\end{makespace}
+Continuous variables:
+\begin{makespace}
+\vspace{10mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+List the constraints. If you do not have any constraints, write ``None''.
+
+\begin{makespace}
+\vspace{20mm}
+\end{makespace}
+Constraints:
+\begin{makespace}
+\vspace{30mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{makespace}
+\newpage
+\end{makespace}
+\begin{Subquestion}
+Provide the objective.
+
+\begin{makespace}
+\vspace{10mm}
+\end{makespace}
+Objective:
+\begin{makespace}
+\vspace{20mm}
+\end{makespace}
+\end{Subquestion}
+
+\begin{Subquestion}
+Some types of optimization problems can be solved in polynomial time. Does the type of optimization problem you have used above fall into that category? In other words, does your modelisation naturally lend itself to being solved with a polynomial-time algorithm?
+
+(Tick the correct answer(s).)
+\begin{itemmultiplechoice}
+\item Yes, regardless of P vs. NP.
+\item Yes, if P $=$ NP. No otherwise.
+\item No, regardless of P vs. NP.
+\item Yes, if P $\neq$ NP. No otherwise.
+\end{itemmultiplechoice}
+\end{Subquestion}
+\end{Question}
+
+\newpage
+\begin{Question}
+The goal of this question is to prove that the \textsc{Travelling Salesperson} problem (TSP) is NP-Complete.
+\decisionproblem{Travelling Salesperson}{
+A set of $n$ cities $C$, a $n\times n$ distance matrix $M$ of positive integers such that $M[c_i, c_j]$ is the distance between cities $c_i \in C$ and $c_j \in C$.
+A target maximal distance $k \in \mathbb{N}$.}{
+Is there a route, represented as a permutation $\sigma$, $c_{\sigma(1)}, c_{\sigma(2)}, \dots, c_{\sigma(n)}, c_{\sigma(1)}$, visiting all cities exactly once and coming back to the starting city such that the total travelled distance is below the target $M[c_{\sigma(n)}, c_{\sigma(1)}] + \sum_{1 \leq i < n} M[c_{\sigma(i)}, c_{\sigma(i+1)}] \leq k$?}
+
+The NP-completeness proof will be split in two parts. First, membership in NP and second, NP-hardness.
+To establish the NP-hardness of \textsc{Travelling Salesperson}, we will construct a reduction from the problem \textsc{Hamiltonian Cycle} (HC).
+We rely on the fact that \textsc{Hamiltonian Cycle} is NP-complete.
+This result has been established elsewhere and we take it as an assumption here.
+The definition of \textsc{Hamiltonian Cycle} is as follows.
+
+\decisionproblem{Hamiltonian Cycle}{
+A graph $G=(V, E)$ where $V$ is a set of vertices and $E \subseteq V\times V$ is a set of edges.}{%
+Does $G$ admit a Hamiltonian Cycle, \emph{i.e.}, a cycle passing through all vertices once?
+}
+
+\begin{Subquestion}
+Prove that the \textsc{Travelling Salesperson} problem is in class NP.
+\begin{makespace}
+\vspace{70mm}
+\end{makespace}
+\end{Subquestion}
+
+We now turn to NP-hardness, the first idea for the reduction is to create one city in the TSP for each vertex in the HC problem: $C = V$.
+The next steps are to define the distances between cities, \emph{i.e.}, define $M$, and to set a target $k$ for the \textsc{Travelling Salesperson} problem.
+\begin{Subquestion}
+Propose a construction of the distances $M[u, v]$ for all $u \in V$ and $v \in V$ and a construction of the target value $k$.
+\begin{makespace}
+\vspace{40mm}
+\end{makespace}
+\end{Subquestion}
+
+\noindent We will now prove the reduction has the required properties.
+\begin{Subquestion}
+What are the required properties? Tick all boxes that apply, if any.
+\begin{itemmultiplechoice}
+\item The reduction takes polynomial time
+\item The reduction takes linear time
+\item The reduction is NP-hard
+\item The reduction maps \textsc{Yes} instances to \textsc{Yes} instances
+\item The reduction maps \textsc{No} instances to \textsc{No} instances
+\end{itemmultiplechoice}
+\end{Subquestion}
+
+\begin{Subquestion}
+Prove that the required properties are satisfied in the reduction.
+\begin{makespace}
+\vspace{70mm}
+\end{makespace}
+\end{Subquestion}
+\end{Question}
+\end{document}
