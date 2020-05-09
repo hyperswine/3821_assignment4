@@ -50,6 +50,7 @@ Either $inv_3 \in I$ OR $inv_4 \in I$, but not both. \\
 Either $inv_5 \in I$ OR $inv_6 \in I$, but not both. \\
 Unless $inv_3 \in I$ OR $inv_4 \in I$, $inv_5 \notin I$ and $inv_6 \notin I$. \\
 $I$ must contain elements $inv_g \in V = \{1,2,7,8,9,10\}$ such that, $2 \leq \sum_{inv \in I} inv_g \leq 4$.
+The total cost $C(I)$ is no greater than $Q$. I.e. $\sum C_i \leq Q$.
 
 \paragraph*{3.4} \textbf{Objective.} \\
 
@@ -57,25 +58,20 @@ $I$ must contain elements $inv_g \in V = \{1,2,7,8,9,10\}$ such that, $2 \leq \s
 We want an $I$ such that net-profit(I) is maximized. The net profit for each investment is $N_j = P_j - C_j$, so the goal is to choose some
 $I$ containing the maximum $\sum_{N_j \in I} N_j$.
 i.e. the goal is to maximize,
-%% perhaps try to think holistically about the problem, what can you make it so you're incorporating everything.
 
 $$N_{max} = N_1x_1 + N_2x_2 + N_3x_3 + ... + N_{10}x_{10}$$
 
-for $0 \leq x_j \leq 1$
+for $x_j = 0$ or $1$.
 
 \paragraph*{3.5} \textbf{Polynomial-Time solvability.} \\
-%think about what the problem really is. Is it an integer LP?
-%IF it is, then only polynomial time if P=NP.
-%ELSE if you think it is a non-integer LP, then it is Yes, regardless of P vs. NP.
-
-%NOTES: No, regardless of P vs. NP - is probably wrong
-%       Yes, if P =/= NP. No, otherwise - sounds very wrong.
-
+% This problem is basically a 0-1 integer programming problem. It is NP-Complete
+% Not D or A.
 \noindent
 The following choices are selected,
 
 \begin{itemize}
-\item Yes, regardless of P vs. NP.
+\item Yes, if $P = NP$. No otherwise.
+\item No, regardless of $P$ vs. $NP$.
 \end{itemize}
 
 \end{document}
