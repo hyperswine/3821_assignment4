@@ -43,7 +43,7 @@ Consider $E \subset V \times V$ for some specific set of edges in a graph $G$. L
 of the complete graph $G^'$, where all nodes are connected exactly once to every other node. Then, for all
 pairs $e \in E$, let those edges weight $0$ in $E^'$, and let all other edges be $1$. Hence $M$ is analoguos
 to $E^'$, i.e. a matrix containing $1$ and $0$'s for the above representation. Now consider $k = 0$ as the
-length of a hamiltonian cycle through $G^'$, and so our target construction is $k \leq 0$ to check
+length of a possible cycle through all the vertices in $G^'$, and so our target construction is $k \leq 0$ for which
 whether the TSP is a YES instance.
 
 \paragraph*{4.3} \textbf{Required properties.}  \\
@@ -63,4 +63,19 @@ The following are selected,
 \paragraph*{4.4} \textbf{Proof that requirements are met.}
 
 \noindent
+It is known that the Hamiltonian Cycle is NP-Complete, so it is iin both NP and NP-Hard. Hence any valid
+reduction from the Hamiltonian Cycle to a problem Y in NP will mean Y is also NP-Hard. If Y is the TSP, then
+reducing Hamiltonian Cycle to it means TSP is NP-Hard.
 
+If a hamiltonian cycle exists in $G$, then the reduction in $4.2$ will return a YES instance. This is where
+$G^'$ has a cycle of length $l = 0$ through all its vertices. Hence we have a directly mapping to a YES instance
+in the TSP, since a hamiltonian cycle with length $0$ means there is a solution in TSP for $k \leq 0$.
+
+Similarly, if no hamiltonian cycle exists in $G$, then it will return a NO instance. This means there is 
+no cycle of length $k = 0$ passing through all the vertices in $G^'$. Hence there is no solution for the
+TSP for which $k \leq 0$, and we also get a NO instance.
+
+It can be seen that the reduction takes no more than $O(n^2)$, i.e. polynomial time, and thus all the requirements
+are met. 
+
+Therefore, TSP is NP-Complete.
