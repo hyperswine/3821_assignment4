@@ -36,9 +36,31 @@ Also check whether $M[C_i, C_{i+1}] \in M$ such that all vertices have been visi
 These checks can be done in polynomial time (linear). Thus there exists a verification algorithm
 to verify the results of TSP in polynomial time.
 
-\paragraph*{4.2} \textbf{Construction of distances.} \\
+\paragraph*{4.2} \textbf{Construction of reduction.} \\
+
+\noindent
+Consider $E \subset V \times V$ for some specific set of edges in a graph $G$. Let $E^'$ be the set of edges
+of the complete graph $G^'$, where all nodes are connected exactly once to every other node. Then, for all
+pairs $e \in E$, let those edges weight $0$ in $E^'$, and let all other edges be $1$. Hence $M$ is analoguos
+to $E^'$, i.e. a matrix containing $1$ and $0$'s for the above representation. Now consider $k = 0$ as the
+length of a hamiltonian cycle through $G^'$, and so our target construction is $k \leq 0$ to check
+whether the TSP is a YES instance.
+
+\paragraph*{4.3} \textbf{Required properties.}  \\
+
+\noindent
+The following are selected,
+
+\begin{itemize}
+    \item The reduction takes polynomial time.
+    \item The reduction is NP-Hard.
+    \item The reduction maps YES instances to YES instances.
+    \item The reduction maps NO instances to NO instances.
+    \end{itemize}
+
+\end{document}
+
+\paragraph*{4.4} \textbf{Proof that requirements are met.}
 
 \noindent
 
-
-\end{document}
