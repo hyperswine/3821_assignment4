@@ -26,8 +26,8 @@
 \paragraph{1.1} \textbf{Nature of LP.} \\
 
 \noindent
-Since each jewellery item is discrete, the burgular cannot e.g., take 'half' a necklace.
-Thus burgular must formulate an integer LP problem.
+Since each jewellery item is discrete, the burgular cannot e.g., take 'half' a diamond ring.
+Thus burgular must formulate an integer LP problem. Note this is a case of an 0-1 integer LP problem.
 
 \paragraph{1.2} \textbf{Variables.} \\
 
@@ -35,17 +35,22 @@ Thus burgular must formulate an integer LP problem.
 $n$ items.\\
 $c_i$ is the value of the $i$th item, $1 \leq i \leq n$ \\
 $w_i$ is the weight of the $i$th item. \\
-$M$ is the weight capacity of the backpack.
+$M$ is the weight capacity of the backpack. \\
+$x_i$ is the corresponding $0$-$1$ boolean value signifying whether an item is taken. \\
 
 \paragraph{1.3} \textbf{Constraints.} \\
 
 \noindent
+The only constraint is the weight capacity of the backpack; the total weight of
+looted items cannot not exceed the capacity,
 $$\sum_{i=1}^{n} w_i \leq M$$
 
 \paragraph*{1.4} \textbf{Objective.} \\
 
 \noindent
-We want to get the most value out of the items looted such that
-$\sum_{i=1}^{n} c_i$ is maximized.
+The aim is to get the most value out of the items looted such that,
+$$\sum_{i=1}^{n} c_ix_i = c_1x_1 + c_2x_2 + c_3x_3 + ... + c_nx_n$$
+
+is maximized.
 
 \end{document}
