@@ -1,3 +1,2 @@
 ## Intro
-
-### This is a private repo for version control, for assignment for 3821.
+3821 is one world of a subject
